@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="en"><head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- All CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FUNDAS@50</title>
+    <link rel="icon" type="image/x-icon" href="images/fundas_logo.png"> -->
+
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+font
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
+
+/*
+body
+*/
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+footer {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+/*
+sprite svg
+*/
+.sprite-svg {
+  display: none;
+}
+
+/*
+title
+*/
+h1 {
+  padding: 40px 0 40px;
+  font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*
+images wrapper
+*/
+.wrapper {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  
+  columns: 1;
+  column-gap: 0;
+  break-inside: avoid;
+  
+  margin: 20px auto 50px;
+  
+  @media (min-width: 600px) {
+     columns: 2;
+  }
+  
+  @media (min-width: 800px) {
+     columns: 3;
+  }
+}
+
+
+
+.grid-image {
+  float: left;
+  width: 100%;
+  padding: 4px;
+  
+  img  {
+    float: left;
+    width: 100%;
+  }
+}
+
+.zoom-wrapper {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+  
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.zoom-wrapper:target {
+  display: flex;
+}
+
+
+@keyframes top-animation {
+    from {
+    top: -100px;
+    opacity: 0;
+  }
+    
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.zoom-wrapper__image {
+    position: relative;
+  width: 80%;
+  max-width:1000px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+    /* animation */
+    animation-name: top-animation;
+    animation-duration: 0.5s;
+}
+
+.cell {
+    box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.zoom-image {
+  max-height: 100%;
+}
+
+/*
+arrow navigation
+*/
+.navigation-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  perspective: 1000px;
+  perspective-origin: 100% 50%;
+}
+
+.navigation-arrow__left {
+  left: 0;
+}
+
+.navigation-arrow__next {
+  right: 0;
+}
+
+.navigation-arrow__image {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  
+  transition: transform 0.3s;
+  
+  .navigation-arrow__prev &{
+    left: 40px;
+    transform: rotateY(90deg);
+      transform-origin: 0% 50%;
+  }
+  
+  .navigation-arrow__next &{
+    right: 40px;
+    transform: rotateY(-90deg);
+      transform-origin: 100% 50%;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .navigation-arrow__prev:hover &,
+  .navigation-arrow__next:hover &{
+    transform: rotateY(0deg);
+  }
+
+}
+
+
+
+
+.navigation-arrow__icon {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 100px;
+  padding: 6px;
+  
+  background-color: #ffffff;
+  
+  & svg.icon {
+    top: 50%;
+    transform: translateY(-50%);
+    
+    fill: #000000;
+    position: relative;
+    stroke-width: 2;
+    stroke: #000000;
+  }
+}
+
+.zoom-wrapper__close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  
+  color: #ffffff;
+  font-size: 40px;
+  text-decoration: none;
+  
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+    </style>
+  </head>
+  <body>
+
+    <div class='sprite-svg'>
+      <svg height='64' viewbox='0 0 64 64' width='64'>
+        <path d='M46.077 55.738c0.858 0.867 0.858 2.266 0 3.133s-2.243 0.867-3.101 0l-25.056-25.302c-0.858-0.867-0.858-2.269 0-3.133l25.056-25.306c0.858-0.867 2.243-0.867 3.101 0s0.858 2.266 0 3.133l-22.848 23.738 22.848 23.738z' id='arrow-left-1'></path>
+      </svg>
+      <svg height='64' viewbox='0 0 64 64' width='64'>
+        <path d='M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z' id='arrow-right-1'></path>
+      </svg>
+    </div>
+    <div class='wrapper'>
+      <a class='grid-image' href='#img1'>
+        <img alt='image 1' src='images/landscape.jpg'>
+      </a>
+      <a class='grid-image' href='#img2'>
+        <img alt='image 2' src='images/portrait.jpg'>
+      </a>
+      <a class='grid-image' href='#img3'>
+        <img alt='image 3' src='images/landscape.jpg'>
+      </a>
+      <a class='grid-image' href='#img4'>
+        <img alt='image 3' src='images/portrait.jpg'>
+      </a>
+      <a class='grid-image' href='#img5'>
+        <img alt='image 3' src='images/portrait.jpg'>
+      </a>
+      <a class='grid-image' href='#img6'>
+        <img alt='image 3' src='images/landscape_2.jpg'>
+      </a>
+      <a class='grid-image' href='#img7'>
+        <img alt='image 3' src='images/landscape_2.jpg'>
+      </a>
+      <a class='grid-image' href='#img8'>
+        <img alt='image 3' src='images/portrait.jpg'>
+      </a>
+      <a class='grid-image' href='#img9'>
+        <img alt='image 4' src='images/landscape_2.jpg'>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img1'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 1' class='zoom-image' src='images/landscape.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img2'>
+      <span class='navigation-arrow__image'>
+        <img alt='image 2' src='images/portrait.jpg'>
+      </span>
+      <span class='navigation-arrow__icon'>
+        <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+          <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+        </svg>
+      </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img2'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 2' class='zoom-image' src='images/portrait.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img1'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 1' src='images/landscape.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img3'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img3'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/landscape.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img2'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 2' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img4'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img4'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/portrait.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img3'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img5'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img5'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/portrait.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img4'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img6'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape_2.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img6'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/landscape_2.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img5'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img7'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape_2.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img7'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/landscape_2.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img6'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape_2.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img8'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img8'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 3' class='zoom-image' src='images/portrait.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img7'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/landscape_2.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img9'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 4' src='images/landscape_2.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='zoom-wrapper' id='img9'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 4' class='zoom-image' src='images/landscape_2.jpg'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__prev' href='#img8'>
+        <span class='navigation-arrow__image'>
+          <img alt='image 3' src='images/portrait.jpg'>
+        </span>
+        <span class='navigation-arrow__icon'>
+          <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+            <use xlink:href='#arrow-left-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+</body></html>
