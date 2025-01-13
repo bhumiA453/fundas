@@ -148,9 +148,9 @@ li.dropdown {
     z-index: 1;
 }*/
 
-/*.logo_fundas{
-  width: 140px;
-}*/
+.logo_fundas{
+  width: 160px;
+}
 
 /* Links inside the dropdown */
 .dropdown-content li {
@@ -363,7 +363,7 @@ li.dropdown-2:hover .dropdown-content-2 {
 
 .banner {
   background: url(../images/left_side_image_2.png) no-repeat left center/36%;
-  padding: 12% 0;
+/*  padding: 12% 0;*/
 }
 
 @media screen and (max-width: 1199px) {
@@ -391,7 +391,7 @@ li.dropdown-2:hover .dropdown-content-2 {
   color: #1e2528;
   font-size: 60px;
   line-height: 75px;
-  margin-bottom: 25px;
+/*  margin-bottom: 25px;*/
 }
 
 @media screen and (max-width: 1199px) {
@@ -410,7 +410,7 @@ li.dropdown-2:hover .dropdown-content-2 {
 
 .banner p {
   color: #555;
-  margin-bottom: 50px;
+/*  margin-bottom: 50px;*/
 }
 
 @media screen and (min-width: 480px) {
