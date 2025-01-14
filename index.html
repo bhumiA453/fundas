@@ -45,12 +45,20 @@
         <nav class="primary-menu">
           <a href="javascript:void(0);" class="mobile-menu"><i class="ti-menu"></i></a>
           <ul> 
-            <li><a href="#" class="px-0">Login</a></li>
-            <li><a href="#programme">Programme</a></li>
+            <!-- <li><a href="#" class="px-0">Login</a></li> -->
+            <li class="dropdown-3">
+              <a href="#" class="dropbtn ">Programme <i class="align-text-top fa fa-sort-desc" aria-hidden="true"></i></a>
+              <ul class="dropdown-content-3">
+                <li><a href="#" class="border-bottom">Schedule</a></li>
+                <li><a href="#" class="">Download</a></li>
+                <!-- <li><a href="#gallery-videos" class="border-bottom">2011</a></li>
+                <li><a href="#gallery-photos">1977</a></li> -->
+              </ul>
+            </li>
             <li class="dropdown-2">
               <a href="#" class="dropbtn px-0">Profiles <i class="align-text-top fa fa-sort-desc" aria-hidden="true"></i></a>
               <ul class="dropdown-content-2">
-                <li><a href="#yearbook" class="border-bottom">FUNDAS NETWORK</a></li>
+                <li><a href="#yearbook" class="border-bottom dropdown_item">FUNDAS NETWORK</a></li>
                 <li><a href="#memoriam" class="border-bottom">OUR DEPARTED FRIENDS</a></li>
                 <!-- <li><a href="#gallery-videos" class="border-bottom">2011</a></li>
                 <li><a href="#gallery-photos">1977</a></li> -->
@@ -65,7 +73,7 @@
                 <li><a href="#gallery-photos">1977</a></li>
               </ul>
             </li>
-            <li><a href="#programme" class="px-0">Download</a></li>
+            <!-- <li><a href="#programme" class="px-0">Download</a></li> -->
           </ul>
         </nav>
       </div>
@@ -84,7 +92,7 @@
         
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-9 mt-4">
+          <div class="col-lg-7 col-md-9 mt-4">
             <div class="banner-content mt-5 pl-4">
               <!-- <span>spa & beauty center</span> -->
               <h3 class="text-dark">1975 - 2025</h3>
@@ -129,7 +137,7 @@
 
 
     <!-- yearbook section start -->
-      <section id="yearbook_2" class="about pb-3 pt-3" style="background-color:#f98183">
+      <!-- <section id="yearbook_2" class="about pb-3 pt-3" style="background-color:#f98183">
         <div class="row">
           <div class="align-content-center col-md-6">
             <h3 class="text-white">Grab your yearbook now!</h3>
@@ -147,7 +155,7 @@
             </div>
           </div>
         </div>      
-      </section>
+      </section> -->
     <!-- yearbook section end -->
     <!-- About section end -->
 
@@ -222,7 +230,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <p class="mb-0"><b>In case of any queries, kindly contact abc@gmail.com</b></p>
+            <p class="mb-0" style="text-transform: capitalize;"><b>In case of any queries, kindly contact abc@gmail.com</b></p>
             <p class="mb-0"><b>Copyright @2025 fundas50. All rights reserved</b></p>
             <!-- <div class="">
               <a href="index.html" class="align-content-around logo">
@@ -262,4 +270,10 @@
   });
 </script>
 
+<script>
+  document.querySelector('.dropdown-3').addEventListener('click', function() {
+    var dropdownContent = this.querySelector('.dropdown-content-3');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  });
+</script>
 </body></html>
