@@ -1694,6 +1694,9 @@ arrow navigation
     background-image: linear-gradient(to right, rgb(0 0 0 / 82%), rgb(255 255 255 / 0%));
 }
 
+.members_of_fundas{
+  text-transform: uppercase;
+}
 .btn-link:hover {
     color: white !important;
      text-decoration: none !important; 
@@ -1785,6 +1788,6 @@ arrow navigation
 
 @media screen and (max-width: 786px) {
   .search-container{
-    width: 50%;
+/*    width: 50%;*/
   }
 }
