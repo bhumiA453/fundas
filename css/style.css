@@ -1434,6 +1434,69 @@ html {
     justify-content: flex-start !important;
     /* text-align: center; */
 }
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    width: 155px;
+    height: 45px;
+    margin: 0.5em;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    animation: populate 0.5s ease-out normal backwards;
+}
+
+.cards-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    width: 155px;
+    height: 45px;
+    margin: 0.5em;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    animation: populate 0.5s ease-out normal backwards;
+}
+
+.sec-heading .tagline {
+    color: #888;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.scroll_names {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 340px;
+}
+
+.nav_dropdown{
+  width: 100%;
+}
+
+.dropdown-menu.show {
+    display: block;
+    left: 79px !important;
+    position: absolute !important;
+}
 }
 
 #search-input-1{
