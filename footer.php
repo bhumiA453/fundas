@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <p class="mb-0"><b>In Case Of Any Queries, Kindly Contact pranesh.misra@brand-scapes.com</b></p>
+            <p class="mb-0"><b>In Case Of Any Queries, Kindly Contact <a href="mailto:pranesh.misra@brand-scapes.com" style="color: white;"><u>pranesh.misra@brand-scapes.com</u></a></b></p>
             <p class="mb-0"><b>Copyright @2025 fundas50. All Rights Reserved</b></p>
             <!-- <div class="">
               <a href="index.html" class="align-content-around logo">

@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="robots" content="noindex, nofollow">
     <title>FUNDAS@50</title>
     <link rel="icon" type="image/x-icon" href="images/fundas_logo.png">
@@ -46,7 +47,7 @@
       </div>
       <div class="align-self-md-center col-md-10 justify-content-around">
         <nav class="primary-menu">
-          <a href="javascript:void(0);" class="mobile-menu"><i class="ti-menu"></i></a>
+          <a href="javascript:void(0);" class="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
           <ul> 
             <!-- <li><a href="#" class="px-0">Login</a></li> -->
             <li class="dropdown nav_dropdown">
