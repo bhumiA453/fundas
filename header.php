@@ -54,7 +54,7 @@
                 Programme
               </a>
               <div class="dropdown-menu menu_dropdown">
-                <a class="dropdown-item" href="#">Schedule</a>
+                <a class="dropdown-item" href="index.php#programme">Schedule</a>
                 <a class="dropdown-item" href="#">Download</a>
               </div>
             </li>
@@ -64,8 +64,8 @@
                 Profiles
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#yearbook">Fundas Network</a>
-                <a class="dropdown-item" href="#memoriam">In Memoriam</a>
+                <a class="dropdown-item" href="index.php#yearbook">Fundas Network</a>
+                <a class="dropdown-item" href="index.php#memoriam">In Memoriam</a>
               </div>
             </li>
 
@@ -74,7 +74,7 @@
                 Gallery
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="gallery_2025.html">2025</a>
+                <a class="dropdown-item" href="gallery_2025.php">2025</a>
                 <a class="dropdown-item" href="#gallery-artworks">2017</a>
                 <a class="dropdown-item" href="#gallery-videos">2011</a>
                 <a class="dropdown-item" href="#gallery-photos">1977</a>
