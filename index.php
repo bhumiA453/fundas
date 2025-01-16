@@ -102,7 +102,7 @@
             $displayName = str_replace('_', ' ', pathinfo($image, PATHINFO_FILENAME));
             echo "
                
-                <a href='view-profile.php?image=$image'    class='members_of_fundas'>
+                <a href='view-profile.php?image=$image' class='members_of_fundas'>
                 <div class='cards'>
                   <h2 class='icon-name'>$displayName</h2>
                 </div>

@@ -11,8 +11,7 @@ if ($imageName) {
         <html lang="en">
         <?php include('header.php') ?>
         <section id="about-us" class="about">
-            <div class="">
-                <h1>Viewing: <?php echo htmlspecialchars($imageName); ?></h1>
+            <div class="profile_img">
                 <img src="<?php echo htmlspecialchars($imagePath); ?>" alt="<?php echo htmlspecialchars($imageName); ?>">
 
             </div>
