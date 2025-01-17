@@ -101,6 +101,21 @@
           right: 25px;
           cursor: pointer;
       }
+
+      .clear-button {
+          padding: 5px 12px;
+          background-color: #e74c3c;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          display: none;
+      }
+
+      .clear-button:hover {
+          background-color: #c0392b;
+      }
     </style>
   </head>
   <body class="home-one">
