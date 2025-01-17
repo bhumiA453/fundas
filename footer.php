@@ -116,6 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         pText.innerText = '100%';
                         const fileNames = response.replaceAll(' <br>',',');
                         fName.innerText = `Uploaded Files: ${fileNames}`;
+                        setTimeout(function () {
+                            location.reload();
+                        }, 8000);
                     },
                     error: function () {
                         $('#message').html('<p style="color: red;">Error uploading files</p>');
