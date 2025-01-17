@@ -1,4 +1,9 @@
-<?php include('header.php') ?>
+<?php include('header.php');
+require 'db_connection.php';
+
+$sql = "SELECT * FROM gallery ORDER BY `id` DESC";
+$result = $conn->query($sql);
+$row = $result->fetch_all(MYSQLI_ASSOC); ?>
 	<section></section>
     <!-- About section start -->
     <!-- <section class="container pb-3 button_section">
@@ -20,23 +25,41 @@
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="border card-body m-auto rounded shadow-sm w-75">
+              <form id="gallery_form" method="post" enctype="multipart/form-data">
               <div class="d-flex justify-content-center">
                 <div class="form-group w-75">
                   <!-- <label for="exampleInputEmail1"></label> -->
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                 </div>
               </div>
               <div class="d-flex justify-content-center">
                 <div class="input-group mb-3 w-75">
                   <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile01" multiple>
+                      <input type="file" class="custom-file-input file-input" name="files[]" id="files" multiple required>
                       <label class="custom-file-label" for="inputGroupFile01">Choose files</label>
                   </div>
                 </div>
               </div>
+              <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-text" id="progressText"></div>
+                    </div>
+                    <div class="file-details">
+                        <div class="file-name" id="fileName"></div>
+                        <button class="clear-button" id="clearButton">
+                            <i class="fas fa-times"></i>
+                            Clear
+                        </button>
+                    </div>
               <div>
-                <button type="submit" class="btn btn-round p-2 rounded shadow-sm" id="submit">Submit</button>
+                <button type="submit" class="btn btn-round p-2 rounded shadow-sm" id="submit">Upload Photos</button>
               </div>
+              </form>   
+
+              <div class="modal" id="myModal">
+                  <span class="close" id="closeModal">&times;</span>
+                  <img class="modal-content" id="uploadedImageModal">
+              </div> 
             </div>
           </div>
         </div>
@@ -51,10 +74,21 @@
       </svg>
     </div>
     <div class='border-top pt-3 wrapper'>
-      <div class="thumbnail">
+      <?php foreach ($row as $key => $value) { ?>
+        <div class="thumbnail">
+          <?php $key = $key + 1; ?>
+          <a class='grid-image' href='#img<?=$key?>'>
+            <img alt='image 1' src='<?=$value["pic"]?>'>
+            <!-- <div class="bottom-left">Bottom Left</div> -->
+            <div class="caption pl-3">
+                  <p>By: <?=$value['name']?></p>
+            </div>
+          </a>
+        </div>
+      <?php } ?>
+      <!-- <div class="thumbnail">
         <a class='grid-image' href='#img1'>
           <img alt='image 1' src='images/landscape.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -63,7 +97,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img2'>
           <img alt='image 1' src='images/portrait.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -72,7 +105,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img3'>
           <img alt='image 1' src='images/landscape.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -81,7 +113,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img4'>
           <img alt='image 1' src='images/portrait.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -90,7 +121,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img5'>
           <img alt='image 1' src='images/portrait.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -99,7 +129,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img5'>
           <img alt='image 1' src='images/landscape_2.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -108,7 +137,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img6'>
           <img alt='image 1' src='images/landscape_2.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -117,7 +145,6 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img7'>
           <img alt='image 1' src='images/portrait.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
@@ -126,14 +153,33 @@
       <div class="thumbnail">
         <a class='grid-image' href='#img8'>
           <img alt='image 1' src='images/landscape_2.jpg'>
-          <!-- <div class="bottom-left">Bottom Left</div> -->
           <div class="caption pl-3">
                 <p>By: Pranesh Misra</p>
           </div>
         </a>
-      </div>
+      </div> -->
     </div>
-    <div class='zoom-wrapper' id='img1'>
+    <?php foreach ($row as $key => $value) { $key = $key + 1 ;?>
+      <div class='zoom-wrapper' id='img<?=$key?>'>
+      <div class='zoom-wrapper__image'>
+        <div class='cell'>
+          <img alt='image 1' class='zoom-image' src='<?=$value["pic"]?>'>
+        </div>
+      </div>
+      <a class='zoom-wrapper__close' href='#'>×</a>
+      <a class='navigation-arrow navigation-arrow__next' href='#img<?= ++$key ?>'>
+      <span class='navigation-arrow__image'>
+        <img alt='image 2' src='<?=$row[++$key]["pic"]?>'>
+      </span>
+      <span class='navigation-arrow__icon'>
+        <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
+          <use xlink:href='#arrow-right-1' xmlns:xlink='http://www.w3.org/1999/xlink'></use>
+        </svg>
+      </span>
+      </a>
+    </div>
+    <?php } ?>
+    <!-- <div class='zoom-wrapper' id='img1'>
       <div class='zoom-wrapper__image'>
         <div class='cell' style="">
           <img alt='image 1' class='zoom-image' src='images/landscape.jpg'>
@@ -364,6 +410,6 @@
           </svg>
         </span>
       </a>
-    </div>   
+    </div>    -->
     </section>
 <?php include('footer.php') ?>

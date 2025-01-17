@@ -54,4 +54,108 @@
 <!-- <script>
   document.querySelector('h1').remove();
 </script> -->
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fInput = document.getElementById('files');
+    const pBar = document.getElementById('progressBar');
+    const pText = document.getElementById('progressText');
+    const fName = document.getElementById('fileName');
+    const modal = document.getElementById('myModal');
+    const cModal = document.getElementById('closeModal');
+    const uImage = document.getElementById('uploadedImageModal');
+    const pContainer = document.getElementById('previewContainer');
+    const cBtn = document.getElementById('clearButton');
+    //fInput.addEventListener('change', (event) => {
+    $("#gallery_form").on('submit',function(e){
+          e.preventDefault();
+          var formData = new FormData(this);
+            var fileInput = document.getElementById('files');
+            var file = fileInput.files[0];
+        if (file ) {
+            const reader = new FileReader();
+            reader.onloadstart = () => {
+                pBar.style.width = '0%';
+                pText.style.display = 'block';
+                pText.innerText = '0%';
+                pContainer.style.display = 'none';
+                cBtn.style.display = 'none';
+            };
+            reader.onprogress = (event) => {
+                if (event.lengthComputable) {
+                    const progress = 
+                        (event.loaded / event.total) * 100;
+                    pBar.style.width = `${progress}%`;
+                    pText.innerText = `${Math.round(progress)}%`;
+                }
+            };
+            reader.onload = () => {
+                const uploadTime = 4000;
+                const interval = 50;
+                const steps = uploadTime / interval;
+                let currentStep = 0;
+                const updateProgress = () => {
+                    const progress = (currentStep / steps) * 100;
+                    pBar.style.width = `${progress}%`;
+                    pText.innerText = `${Math.round(progress)}%`;
+                    currentStep++;
+
+                    if (currentStep <= steps) {
+                        setTimeout(updateProgress, interval);
+                    } else {
+                        if(currentStep > steps){
+                            $.ajax({
+                    url: 'upload.php',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        pBar.style.width = '100%';
+                        pText.innerText = '100%';
+                        const fileNames = response.replaceAll(' <br>',',');
+                        fName.innerText = `Uploaded Files: ${fileNames}`;
+                    },
+                    error: function () {
+                        $('#message').html('<p style="color: red;">Error uploading files</p>');
+                    }
+                });
+                        }
+                        
+                    }
+                };
+                setTimeout(updateProgress, interval);
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a valid image file.');
+            fInput.value = '';
+        }
+    });
+    pContainer.addEventListener('click', () => {
+        modal.style.display = 'block';
+        uImage.src = document.getElementById('previewImage').src;
+    });
+    cModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+    cBtn.addEventListener('click', () => {
+        fInput.value = '';
+        pBar.style.width = '0%';
+        pText.style.display = 'none';
+        fName.innerText = '';
+        pContainer.style.display = 'none';
+        cBtn.style.display = 'none';
+    });
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+      
+    </script>
+
 </body></html>
