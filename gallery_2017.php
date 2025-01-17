@@ -1,6 +1,6 @@
 <?php include('header.php') ?>
 	<section></section>
-  <object type="application/pdf" data="pdf/gallery_2017.pdf" class="mt-1 styling_of_pdf">
+  <iframe src="pdf/gallery_2017.pdf" width="100%" height="600px" frameborder="0"></iframe>
     
   </object>
     
