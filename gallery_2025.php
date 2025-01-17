@@ -43,14 +43,14 @@ $row = $result->fetch_all(MYSQLI_ASSOC); ?>
               <div class="progress-container">
                         <div class="progress-bar" id="progressBar"></div>
                         <div class="progress-text" id="progressText"></div>
-                    </div>
-                    <div class="file-details">
+              </div>
+              <div class="file-details">
                         <div class="file-name" id="fileName"></div>
                         <button class="clear-button" id="clearButton">
                             <i class="fas fa-times"></i>
                             Clear
                         </button>
-                    </div>
+              </div>
               <div>
                 <button type="submit" class="btn btn-round p-2 rounded shadow-sm" id="submit">Upload Photos</button>
               </div>
