@@ -1497,6 +1497,11 @@ html {
     left: 79px !important;
     position: absolute !important;
 }
+
+.styling_of_pdf{
+  width: 400px;
+  height: 700px;
+}
 }
 
 #search-input-1{
@@ -1690,6 +1695,11 @@ images wrapper
 
 .zoom-wrapper:target {
   display: flex;
+}
+
+.styling_of_pdf{
+  width: 1265px;
+  height: 700px;
 }
 
 
