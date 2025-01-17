@@ -135,14 +135,14 @@
     </div>
     <div class='zoom-wrapper' id='img1'>
       <div class='zoom-wrapper__image'>
-        <div class='cell'>
+        <div class='cell' style="">
           <img alt='image 1' class='zoom-image' src='images/landscape.jpg'>
         </div>
       </div>
       <a class='zoom-wrapper__close' href='#'>×</a>
       <a class='navigation-arrow navigation-arrow__next' href='#img2'>
       <span class='navigation-arrow__image'>
-        <img alt='image 2' src='images/portrait.jpg'>
+        <img alt='image 2' src='images/portrait.jpg' >
       </span>
       <span class='navigation-arrow__icon'>
         <svg class='icon' height='28' viewbox='0 0 64 64' width='28'>
