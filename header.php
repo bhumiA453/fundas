@@ -116,6 +116,10 @@
       .clear-button:hover {
           background-color: #c0392b;
       }
+
+      .error{
+        color: red !important;
+      }
     </style>
   </head>
   <body class="home-one">
