@@ -15,8 +15,8 @@
           <h2>Golden Reunion</h2>
           <h3 class="text-dark">IIMA 1975 Entry Batch</h3>
           <h4 class="font-weight-bold text-dark">Celebrating 50 Years of Friendships</h4>
-          <p>Can you believe that 50 years have passed since we first met at the Indian Institute of Management swank campus at Vastrapura, Ahmedabad? Time has flown real fast!</p>
-          <p>We came from diverse backgrounds and geographies and quickly gelled together as a group of friends. We had simple ambitions like most young people: build a career, start a family, look after our parents and give back to society. After graduating, each of us got busy in pursuing our goals and dreams and moved to different parts of the world. </p>
+          <p>Can you believe that 50 years have passed since we first met at the Indian Institute of Management's campus at Vastrapura, Ahmedabad? Time has flown real fast!</p>
+          <p>We came from diverse backgrounds and geographies and quickly jelled together as a group of friends. We had simple ambitions like most young people: build a career, start a family, look after our parents and give back to society. After graduating, each of us got busy in pursuing our goals and dreams and moved to different parts of the world. </p>
           <p>This Golden Reunion, Fundas@50, gives us a chance to rekindle the friendships that started 5 decades ago. To relish and relive the moments we enjoyed way back then.</p>
           <p>Welcome to Fundas@50 Celebrations at Sterling Resorts, Puri, Odisha (22-25 February 2025)..</p>
           <!-- <a href="view-profile.php?image=#" class="btn">login</a> -->
