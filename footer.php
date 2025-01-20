@@ -112,13 +112,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     contentType: false,
                     processData: false,
                     success: function (response) {
+                      console.log(response);
+                      var names = response.message;
+                      const fileNames = names.replaceAll('<br>',',');
+                      if (response.status === 'success') {
                         pBar.style.width = '100%';
                         pText.innerText = '100%';
-                        const fileNames = response.replaceAll(' <br>',',');
+                        
                         fName.innerText = `Uploaded Files: ${fileNames}`;
-                        setTimeout(function () {
+                        
+                      }else{
+                        $("#fileName").addClass('error');
+                        fName.innerText = `${fileNames}`;
+                      }
+
+                      setTimeout(function () {
                             location.reload();
                         }, 8000);
+                        
                     },
                     error: function () {
                         $('#message').html('<p style="color: red;">Error uploading files</p>');
