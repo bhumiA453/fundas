@@ -65,7 +65,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="p-2 px-4 rounded shadow-sm" style="background-color:#fee4cb">
-          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Heading 1</b></p>
           <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
         </div>
@@ -75,7 +75,7 @@
     <div class="row mt-4">
       <div class="col-md-12">
         <div class="p-2 px-4 rounded shadow-sm" style="background-color:#e9e7fd">
-          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Heading 2</b></p>
           <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
         </div>
@@ -85,7 +85,7 @@
     <div class="row mt-4">
       <div class="col-md-12">
         <div class="p-2 px-4 rounded shadow-sm" style="background-color:#c8f7dc">
-          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Heading 3</b></p>
           <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
         </div>
