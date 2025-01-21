@@ -51,6 +51,50 @@
   </div>
 </section>
 
+<!-- announcment section start -->
+
+<section id="announcement" class="about" style="background: #f6feff;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-md-12 m-auto">
+        <div class="sec-heading">
+          <h3 class="sec-title">Announcement</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="p-2 px-4 rounded shadow-sm" style="background-color:#fee4cb">
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="p-2 px-4 rounded shadow-sm" style="background-color:#e9e7fd">
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="p-2 px-4 rounded shadow-sm" style="background-color:#c8f7dc">
+          <p class="font-weight-bold mb-0 text-dark text-left"><b>Pranesh Misra</b></p>
+          <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- announcement section end -->
 
 <!-- yearbook section start -->
 <!-- <section id="yearbook_2" class="about pb-3 pt-3" style="background-color:#f98183">

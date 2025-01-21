@@ -1495,7 +1495,7 @@ html {
 .dropdown-menu.show {
     display: block;
     left: 79px !important;
-    position: absolute !important;
+/*    position: absolute !important;*/
 }
 
 .styling_of_pdf{
