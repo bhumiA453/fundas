@@ -126,55 +126,68 @@
 
     <!-- Header strat -->
     <header class="abs-header border-bottom header p-2 shadow-sm">
-  <div class="container">
-    <div class="row align-items-end">
-      <div class="align-items-sm-center col-md-2">
-        <a href="index.php" class="logo">
-          <img src="images/fundas_logo.png" alt="" class="logo_fundas">
-        </a>
-      </div>
-      <div class="align-self-md-center col-md-10 justify-content-around">
-        <nav class="primary-menu">
-          <a href="javascript:void(0);" class="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
-          <ul> 
-            <!-- <li><a href="#" class="px-0">Login</a></li> -->
-            <li class="dropdown nav_dropdown">
-              <a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                Programme
-              </a>
-              <div class="dropdown-menu menu_dropdown">
-                <a class="border-bottom dropdown-item" href="index.php#programme">Schedule</a>
-                <a class="dropdown-item" href="#">Download</a>
-              </div>
-            </li>
-
-            <li class="dropdown nav_dropdown">
-              <a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                Profiles
-              </a>
-              <div class="dropdown-menu">
-                <a class="border-bottom dropdown-item" href="index.php#yearbook">Fundas Network</a>
-                <a class="dropdown-item" href="index.php#memoriam">In Memoriam</a>
-              </div>
-            </li>
-
-            <li class="dropdown nav_dropdown">
-              <a class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                Gallery
-              </a>
-              <div class="dropdown-menu">
-                <a class="border-bottom dropdown-item" href="gallery_2025.php">2025</a>
-                <a class="border-bottom dropdown-item" href="gallery_2017.php">2017</a>
-                <a class="border-bottom dropdown-item" href="#gallery-videos">2001</a>
-                <a class="dropdown-item" href="#gallery-photos">1977</a>
-              </div>
-            </li>
-            <!-- <li><a href="#programme" class="px-0">Download</a></li> -->
-          </ul>
-        </nav>
-      </div>
-    </div>
+      <div class="container">
+        <div class="row align-items-center">
+  <div class="col-md-2 d-flex justify-content-between align-items-center">
+    <a href="index.php" class="logo">
+      <img src="images/fundas_logo.png" alt="" class="logo_fundas">
+    </a>
+    <!-- Hamburger button -->
+    <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="cursor:pointer;">
+      <i class="fa fa-bars" aria-hidden="true" style="font-size: 21px;"></i>
+    </button>
   </div>
-</header>
+
+  <div class="col-md-10">
+    <nav class="bg-white navbar navbar-expand-lg navbar-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="font-size: 16px;">
+          <li class="nav-item dropdown" style="cursor:pointer;">
+            <a class="dropdown-toggle font-weight-normal nav-link text-dark" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Programme
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item border-bottom" href="#programme">Schedule</a>
+              <a class="dropdown-item" href="#">Download</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link text-dark font-weight-normal" href="#announcement">Announcement <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark font-weight-normal" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Profiles
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item border-bottom" href="index.php#yearbook">FUNDAS NETWORK</a>
+              <a class="dropdown-item" href="index.php#memoriam">IN MEMORIAM</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark font-weight-normal" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Gallery
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item border-bottom" href="gallery_2025.php">2025</a>
+              <a class="dropdown-item border-bottom" href="gallery_2017.php">2017</a>
+              <a class="dropdown-item border-bottom" href="#">2001</a>
+              <a class="dropdown-item" href="gallery_1977.php">1977</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+      </div>
+
+
+
+
+    </header>
 
     <!-- Header strat -->
