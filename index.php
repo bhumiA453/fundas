@@ -78,18 +78,18 @@
           </div>
           <div class="px-3">
             <ol class="font-weight-normal text-dark text-left list_for_mobile">
-              <li>What is the plan for the Yearbook? 
+              <li><b>What is the plan for the Yearbook?</b> 
                 <p class="mb-0">The Fundas@50 Yearbook will be printed as a coffee table book. A PDF version will also be available for download on the Fundas@50 Website. Grateful for Fundas communitysupport to help us build profile pages for nearly all our batchmates. This will,hopefully, be a document you would want to retain in your library for years to come.  </p>
               </li>
-              <li>When will the Yearbook be ready?
+              <li><b>When will the Yearbook be ready?</b>
                 <ol class="px-4 text-left">
-                  <li class="">Printed Coffee Table Book: Printed copy will be available on February 20, 2025 – just in time for our Reunion that starts on February 22, 2025. </li>
-                  <li>Soft Copy: Soft copy will be posted on our webpage, ready to download, by February 15, 2025</li>
-                  <li>Profile pages are already visible on our Website (https://fundas50.brand-scapes.com/) </li>
+                  <li class=""><b>Printed Coffee Table Book:</b> Printed copy will be available on February 20, 2025 – just in time for our Reunion that starts on February 22, 2025. </li>
+                  <li><b>Soft Copy:</b> Soft copy will be posted on our webpage, ready to download, by February 15, 2025</li>
+                  <li><b>Profile pages</b> are already visible on our Website (https://fundas50.brand-scapes.com/) </li>
                 </ol>
               </li>
               <li>
-                What about the T-Shirt and Caps? 
+                <b>What about the T-Shirt and Caps?</b>
                 <ol class="px-4 text-left">
                   <li>Specially designed T-Shirt and Cap,  with the IIMA and Fundas@50 logo, is being produced for those who have registered for the Reunion. </li>
                   <li>The T-Shirt will be handed over at Sterling Puri, when you check in. </li>
@@ -98,10 +98,10 @@
                 </ol>
               </li>
               <li>
-                How Much will the Yearbook, T-Shirt and Cap Cost?
+                <b>How Much will the Yearbook, T-Shirt and Cap Cost?</b>
                 <ol class="px-4 text-left">
-                  <li>For those attending the Reunion: The cost is already covered in the Central Costs you have paid. So, you don’t need to pay anything.  </li>
-                  <li>For those not registered for the Reunion: You will need to pay the following:
+                  <li><b>For those attending the Reunion:</b> The cost is already covered in the Central Costs you have paid. So, you don’t need to pay anything.  </li>
+                  <li><b>For those not registered for the Reunion:</b> You will need to pay the following:
                     <ul>
                       <li>a. Yearbook Hard Copy: Rs. 2,000</li>
                       <li>b. Yearbook Soft Copy: FREE</li>
@@ -109,7 +109,7 @@
                       <li>d. Cap: Rs. 200 each. </li>
                     </ul>
                   </li>
-                  <li>Courier Cost:  This is estimated as follows:
+                  <li><b>Courier Cost:</b>  This is estimated as follows:
                     <ul>
                       <li>a. To Indian destination: Rs. 500 </li>
                       <li>b. To International destination: Rs. 3,000</li>
@@ -117,7 +117,7 @@
                   </li>
                 </ol>
               </li>
-              <li>If I am not attending the Reunion, how can I get these stuff?
+              <li><b>If I am not attending the Reunion, how can I get these stuff?</b>
                 <ol class="px-4 text-left">
                   <li>There are two options
                     <ul>
