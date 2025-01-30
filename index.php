@@ -65,14 +65,77 @@
     <div class="row">
       <div class="col-md-12">
         <div class="p-2 px-4 rounded shadow-sm" style="background-color:#fee4cb">
-          <p class="font-weight-bold mb-0 text-dark text-left"><b>Heading 1</b></p>
-          <p class="font-weight-normal text-left mb-0" style="color:#61574d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
+          <div class="d-flex justify-content-between">
+            <div>
+              <p class="font-weight-bold mb-0 text-dark text-left announcement_headings"><b>ANNOUNCEMENT  NO.   01</b></p>
+            </div>
+            <div>
+              <p class="font-weight-bold mb-0 text-dark text-left announcement_headings"><b>DATE: 30 JANUARY 2025</b></p>
+            </div>
+          </div>
+          <div>
+            <p class="font-weight-bold mb-0 text-dark text-left announcement_headings">FAQ ON YEARBOOK AND T-SHIRTS/ CAPS </p>
+          </div>
+          <div class="px-3">
+            <ol class="font-weight-normal text-dark text-left list_for_mobile">
+              <li>What is the plan for the Yearbook? 
+                <p class="mb-0">The Fundas@50 Yearbook will be printed as a coffee table book. A PDF version will also be available for download on the Fundas@50 Website. Grateful for Fundas communitysupport to help us build profile pages for nearly all our batchmates. This will,hopefully, be a document you would want to retain in your library for years to come.  </p>
+              </li>
+              <li>When will the Yearbook be ready?
+                <ol class="px-4 text-left">
+                  <li class="">Printed Coffee Table Book: Printed copy will be available on February 20, 2025 – just in time for our Reunion that starts on February 22, 2025. </li>
+                  <li>Soft Copy: Soft copy will be posted on our webpage, ready to download, by February 15, 2025</li>
+                  <li>Profile pages are already visible on our Website (https://fundas50.brand-scapes.com/) </li>
+                </ol>
+              </li>
+              <li>
+                What about the T-Shirt and Caps? 
+                <ol class="px-4 text-left">
+                  <li>Specially designed T-Shirt and Cap,  with the IIMA and Fundas@50 logo, is being produced for those who have registered for the Reunion. </li>
+                  <li>The T-Shirt will be handed over at Sterling Puri, when you check in. </li>
+                  <li>There will be a T-Shirt for each member of your family/ group, who is attending the Reunion.</li>
+                  <li>We are pre-booking T-Shirts and Caps for Fundas who are not registered. (see para 5 below)</li>  
+                </ol>
+              </li>
+              <li>
+                How Much will the Yearbook, T-Shirt and Cap Cost?
+                <ol class="px-4 text-left">
+                  <li>For those attending the Reunion: The cost is already covered in the Central Costs you have paid. So, you don’t need to pay anything.  </li>
+                  <li>For those not registered for the Reunion: You will need to pay the following:
+                    <ul>
+                      <li>a. Yearbook Hard Copy: Rs. 2,000</li>
+                      <li>b. Yearbook Soft Copy: FREE</li>
+                      <li>c. T-Shirt: Rs. 800 each </li>
+                      <li>d. Cap: Rs. 200 each. </li>
+                    </ul>
+                  </li>
+                  <li>Courier Cost:  This is estimated as follows:
+                    <ul>
+                      <li>a. To Indian destination: Rs. 500 </li>
+                      <li>b. To International destination: Rs. 3,000</li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+              <li>If I am not attending the Reunion, how can I get these stuff?
+                <ol class="px-4 text-left">
+                  <li>There are two options
+                    <ul>
+                      <li>a. We can courier it to your home address (you pay the estimated courier charges</li>
+                      <li>b. You may get a friend to collect it for your from Puri. (Please be aware that this could be logistic challenge; and there might be some hits and misses).</li>
+                    </ul>
+                  </li>
+                  <li>Watch this space for a survey link, to facilitate this. The survey link will cover all details: your delivery address, your T-Shirt sizes and how to pay details.  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+          <!-- <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div> -->
         </div>
       </div>
     </div>
 
-    <div class="row mt-4">
+   <!--  <div class="row mt-4">
       <div class="col-md-12">
         <div class="p-2 px-4 rounded shadow-sm" style="background-color:#e9e7fd">
           <p class="font-weight-bold mb-0 text-dark text-left"><b>Heading 2</b></p>
@@ -90,7 +153,7 @@
           <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 

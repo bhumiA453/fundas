@@ -391,6 +391,8 @@ li.dropdown-3:hover .dropdown-content-3 {
   .primary-menu li, .footer .foo-nav li {
     display: inline-block;
   }
+
+
 }
 
 .primary-menu li a, .footer .foo-nav li a {
@@ -1951,5 +1953,13 @@ arrow navigation
 @media screen and (max-width: 786px) {
   .search-container{
 /*    width: 50%;*/
+  }
+  .announcement_headings{
+    font-size: 11px;
+  }
+
+  .list_for_mobile{
+    font-size: 10px;
+    line-height: 13px;
   }
 }
