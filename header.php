@@ -173,7 +173,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item border-bottom" href="gallery_2025.php">2025</a>
               <a class="dropdown-item border-bottom" href="gallery_2017.php">2017</a>
-              <a class="dropdown-item border-bottom" href="#">2001</a>
+              <a class="dropdown-item border-bottom" href="gallery_2001.php">2001</a>
               <a class="dropdown-item" href="gallery_1977.php">1977</a>
             </div>
           </li>
