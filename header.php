@@ -147,13 +147,13 @@
               Programme
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item border-bottom" href="#programme">Schedule</a>
+              <a class="dropdown-item border-bottom" href="index.php#programme">Schedule</a>
               <a class="dropdown-item" href="#">Download</a>
             </div>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link text-dark font-weight-normal" href="#announcement">Announcement <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-dark font-weight-normal" href="index.php#announcement">Announcement <span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item dropdown">
