@@ -172,4 +172,27 @@ document.addEventListener('DOMContentLoaded', () => {
       
     </script>
 
+    <script>
+  function toggleSubMenu(event) {
+    event.preventDefault();  // Prevent the default link behavior
+    event.stopPropagation(); // Prevent the dropdown from closing
+    
+    const submenu = document.getElementById('submenu2017');
+    if (submenu.style.display === 'none') {
+      submenu.style.display = 'block';  // Show the submenu
+    } else {
+      submenu.style.display = 'none';   // Hide the submenu
+    }
+  }
+
+  // Optional: Close submenu if clicking outside of the dropdown
+  document.addEventListener('click', function(e) {
+    const submenu = document.getElementById('submenu2017');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (!dropdownMenu.contains(e.target)) {
+      submenu.style.display = 'none';  // Close the submenu if clicked outside
+    }
+  });
+</script>
+
 </body></html>

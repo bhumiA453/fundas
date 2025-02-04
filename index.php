@@ -53,8 +53,8 @@
 
 <!-- announcment section start -->
 
-<section id="announcement" class="about" style="background: #f6feff;">
-  <div class="container">
+<section id="announcement" class="about" >
+  <div class="">
     <div class="row">
       <div class="col-lg-10 col-md-12 m-auto">
         <div class="sec-heading">
@@ -62,9 +62,89 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-12">
-        <div class="p-2 px-4 rounded shadow-sm" style="background-color:#fee4cb">
+        <div class="shadow-sm announcement_tab" style="background: #f6feff;">
+          <div class="d-flex justify-content-between">
+            <div>
+              <p class="font-weight-bold mb-0 text-dark text-left announcement_headings"><b>ANNOUNCEMENT  NO.   02</b></p>
+            </div>
+            <div>
+              <p class="font-weight-bold mb-0 text-dark text-left announcement_headings"><b>DATE: 04 FEBRUARY 2025</b></p>
+            </div>
+          </div>
+          <div>
+            <p class="announcement_headings font-weight-bold mb-0 text-center text-left text-danger">Modified Plan for Jagannath Temple Darshan</p>
+          </div>
+          <div class="px-3">
+            <p class="text-dark text-left font-weight-normal text-dark text-left announcement_2">We had originally planned darshan at Jagannath Temple from <b>4:00 to 6:00 am on 23rd and 24th February</b>. Many of you expressed interest, as indicated by your response to the survey we conducted earlier. However, new developments and information have impacted this plan: </p>
+            <ol class="text-dark text-left font-weight-normal text-dark text-left px-5 announcement_2">
+              <li>In February, the earliest visiting time to the temple is 6:00 am. So, we cannot start at 4:00 am.</li>
+              <li>The Government/Temple Authorities have announced a new queue system (as in Tirupathi temple) which has begun on 1 February. We do not yet know how well this system is working. (TOI - Jagannath Temple in Puri New Darshan Queue). </li>
+              <li>From first-hand feedback, time required for darshan is unpredictable and variable (between 1 and 2 hours), depending on size of the crowd at the time of our visit. Also, ongoing renovation work at the temple is adding to the uncertainty of puja and prasad schedules.</li>
+              <li>Buses are not allowed up to the temple gate. One must take an autorickshaw from the bus parking lot/hotel. </li>
+            </ol>
+            <p class="text-dark text-left font-weight-normal text-dark text-left announcement_2">After evaluating several options, we have decided to offer <b>a single window for Temple Darshan at 12:00 noon on February 23rd</b>. This window has minimal impact on the rest of our program. Of course, Fundas wishing to visit at other times on their own may do so. We will offer guidance to facilitate your trip.  <b style="font-style: italic;">However, before you decide, please note the caveats about travel to the Temple and conditions inside the Temple compound listed below.</b></p>
+            <p class="text-danger font-weight-bold text-left announcement_2">Logistics Plan on morning (post breakfast) of 23rd February: </p>
+            <p class="text-dark font-weight-normal text-left announcement_2">We will offer three optional plans from which you could choose one. For our planning, we will seek your preferred option in a couple of days. </p>
+
+            <table class="table table-bordered announcement_2">
+    <!-- <thead>
+      <tr>
+        <th scope="col">BLUE ROUTE</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead> -->
+      <tbody class="text-left">
+        <tr class="text-primary font-weight-normal">
+          <th scope="row" style="vertical-align: middle;">BLUE ROUTE</th>
+          <td style="vertical-align: middle;">Original excursion plan with visits to Raghurajpur and Sudam Sand Art Museum </td>
+          <td>9:00 am: Sterling - Raghurajpur <br>
+              11:30 am: Raghurajpur - Sand Museum<br>
+              1:30 pm: Sand Museum – Sterling 
+          </td>
+        </tr>
+        <tr style="color:orange;" class="font-weight-normal">
+          <th scope="row" style="vertical-align: middle;">ORANGE ROUTE</th>
+          <td style="vertical-align: middle;">Visit to Raghurajpur and Temple darshan – no Sand Art Museum) </td>
+          <td>9:00 am:  Sterling - Raghurajpur <br>
+              11:15 am: Raghurajpur - Jagannath Temple<br>
+              1:30 pm: Jagannath Temple - Sterling 
+          </td>
+        </tr>
+        <tr class="text-success font-weight-normal">
+          <th scope="row" style="vertical-align: middle;">GREEN ROUTE </th>
+          <td style="vertical-align: middle;">Temple darshan only: no visit to Raghurajpur/Sand Art Museum</td>
+          <td>11:30 am:  Sterling – Jagannath Temple <br>
+              1:30 pm:  Jagannath Temple - Sterling
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="text-dark font-weight-normal text-left announcement_2"><b style="font-style:italic;">Please Keep in Mind…</b> Visiting any busy and crowded temple requires that we consider factors that are pertinent at our age. Please consider these factors before you make your decision about the visit. At Jagannath Temple you will have to deal with: </p>
+
+    <ol class="text-left text-dark font-weight-normal px-5 announcement_2">
+      <li>Autorickshaw ride to the temple gate from the bus parking lot (5-6 minutes) or hotel (15-20 minutes). Arranging autos for a large group will add to the waiting time.</li>
+      <li>A few minutes’ walk from and to the rickshaw drop off location to temple gate.</li>
+      <li>Shoes, belts, phones to be left outside the gate in an authorized “Shoe Stand”. </li>
+      <li>Multiple steps to enter the temple (22 sacred steps inside the temple).</li>
+      <li>Walking on bare feet on wet and uneven ground inside the temple. </li>
+      <li>Dealing with large crowds (as in Tirupati and similar temples) inside the temple.</li>
+      <li>No toilet facilities inside the temple (facilities available at bus parking area). </li>
+    </ol>
+    <p class="text-dark font-weight-normal text-left announcement_2">We encourage you to do your own homework online as well before you make your decision. We want to provide temple-goers as enjoyable an experience as possible given the caveats listed above.</p>
+  </div>
+          <!-- <div><p class="text-right font-weight-normal mb-0">January 21, 2025</p></div> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="shadow-sm announcement_tab">
           <div class="d-flex justify-content-between">
             <div>
               <p class="font-weight-bold mb-0 text-dark text-left announcement_headings"><b>ANNOUNCEMENT  NO.   01</b></p>
