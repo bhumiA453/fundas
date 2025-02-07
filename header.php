@@ -23,7 +23,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>FUNDAS@50</title>
     <link rel="icon" type="image/x-icon" href="images/fundas_logo.png">
-
+    
 
     <style>
       .loader {

@@ -31,6 +31,8 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/scripts.js"></script>
+
+    
     <script>
   document.querySelector('.dropdown').addEventListener('click', function() {
     var dropdownContent = this.querySelector('.dropdown-content');
