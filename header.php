@@ -23,7 +23,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>FUNDAS@50</title>
     <link rel="icon" type="image/x-icon" href="images/fundas_logo.png">
-
+    
 
     <style>
       .loader {
@@ -147,13 +147,13 @@
               Programme
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item border-bottom" href="#programme">Schedule</a>
+              <a class="dropdown-item border-bottom" href="index.php#programme">Schedule</a>
               <a class="dropdown-item" href="#">Download</a>
             </div>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link text-dark font-weight-normal" href="#announcement">Announcement <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-dark font-weight-normal" href="index.php#announcement">Announcement <span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item dropdown">
@@ -171,11 +171,15 @@
               Gallery
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item border-bottom" href="gallery_2025.php">2025</a>
-              <a class="dropdown-item border-bottom" href="gallery_2017.php">2017</a>
-              <a class="dropdown-item border-bottom" href="#">2001</a>
-              <a class="dropdown-item" href="gallery_1977.php">1977</a>
-            </div>
+                <a class="dropdown-item border-bottom" href="gallery_2025.php">2025</a>
+                <a class="border-bottom d-flex dropdown-item justify-content-between" href="#" onclick="toggleSubMenu(event)">2017 <i class="align-content-center fa fa-caret-down" aria-hidden="true"></i></a>
+                <div id="submenu2017" class="dropdown-submenu" style="display: none;">
+                    <a class="dropdown-item border-bottom" href="gallery_2017.php">Photos</a>
+                    <a class="dropdown-item border-bottom" href="profile.php">Profile</a>
+                </div>
+            <a class="dropdown-item border-bottom" href="gallery_2001.php">2001</a>
+            <a class="dropdown-item" href="gallery_1977.php">1977</a>
+          </div>
           </li>
         </ul>
       </div>

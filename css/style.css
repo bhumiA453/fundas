@@ -391,6 +391,8 @@ li.dropdown-3:hover .dropdown-content-3 {
   .primary-menu li, .footer .foo-nav li {
     display: inline-block;
   }
+
+
 }
 
 .primary-menu li a, .footer .foo-nav li a {
@@ -1947,9 +1949,48 @@ arrow navigation
   padding-bottom: 100%;
 }
 
+.announcement_tab{
+  background-color: #fee4cb;
+    padding: 10px 40px 10px 40px;
+}
+
+/* Positioning the submenu correctly */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  display: none; /* Hide submenu by default */
+}
+
+/* Optional: hover effect for submenu items */
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+
 
 @media screen and (max-width: 786px) {
   .search-container{
 /*    width: 50%;*/
   }
+  .announcement_headings{
+    font-size: 10px;
+  }
+
+  .list_for_mobile{
+    font-size: 9px;
+    line-height: 13px;
+  }
+  .announcement_tab{
+  background-color: #fee4cb;
+    padding: 10px 10px 10px 10px;
+}
+
+.announcement_2{
+  font-size: 9px;
+  line-height: 15px;
+}
 }
